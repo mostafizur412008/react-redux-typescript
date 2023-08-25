@@ -14,13 +14,16 @@ const counterSlice = createSlice({
     initialState,
     reducers:{
         //increament
-        increamented(state){
+        incremented(state){
             //immer makes it immutable
             state.value++;
-        }
+        },
+        decremented: (state) => {
+            state.value--;
+          },
     }
 });
 
-export const {increamented} = counterSlice.actions;
+export const {incremented,decremented} = counterSlice.actions;
 export default counterSlice.reducer;
 
